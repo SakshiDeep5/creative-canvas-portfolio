@@ -143,10 +143,10 @@ function Contact() {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     const nextErrors: Record<string, string> = {};
-    if (!String(form.get("name") ?? "").trim()) nextErrors.name = "Please enter your name.";
+    if (!String(form.get("name") ?? "").trim()) nextErrors["name"] = "Please enter your name.";
     const email = String(form.get("email") ?? "");
-    if (!/^\S+@\S+\.\S+$/.test(email)) nextErrors.email = "Please enter a valid email address.";
-    if (String(form.get("message") ?? "").trim().length < 10) nextErrors.message = "Please share a little more about your message.";
+    if (!/^\S+@\S+\.\S+$/.test(email)) nextErrors["email"] = "Please enter a valid email address.";
+    if (String(form.get("message") ?? "").trim().length < 10) nextErrors["message"] = "Please share a little more about your message.";
     setErrors(nextErrors);
     setNotice(Object.keys(nextErrors).length ? "" : "Your message is ready. Email delivery will be connected soon.");
   }
@@ -154,9 +154,9 @@ function Contact() {
     <section className="contact" id="contact">
       <div className="contact-intro reveal"><p className="eyebrow">Start a conversation</p><h2>Let&apos;s build something <em>meaningful.</em></h2><p>Have an idea, opportunity or project in mind? I&apos;d love to hear about it.</p><a className="contact-email" href="mailto:">Email me <Mail size={18} /></a></div>
       <form className="contact-form reveal" onSubmit={submit} noValidate>
-        <label>Name<input name="name" type="text" aria-invalid={Boolean(errors.name)} aria-describedby="name-error" /><span id="name-error">{errors.name}</span></label>
-        <label>Email<input name="email" type="email" aria-invalid={Boolean(errors.email)} aria-describedby="email-error" /><span id="email-error">{errors.email}</span></label>
-        <label>Message<textarea name="message" rows={4} aria-invalid={Boolean(errors.message)} aria-describedby="message-error" /><span id="message-error">{errors.message}</span></label>
+        <label>Name<input name="name" type="text" aria-invalid={Boolean(errors["name"])} aria-describedby="name-error" /><span id="name-error">{errors["name"]}</span></label>
+        <label>Email<input name="email" type="email" aria-invalid={Boolean(errors["email"])} aria-describedby="email-error" /><span id="email-error">{errors["email"]}</span></label>
+        <label>Message<textarea name="message" rows={4} aria-invalid={Boolean(errors["message"])} aria-describedby="message-error" /><span id="message-error">{errors["message"]}</span></label>
         <button type="submit">Send Message <ArrowUpRight size={16} /></button>
         {notice ? <p className="form-notice" role="status">{notice}</p> : null}
       </form>
