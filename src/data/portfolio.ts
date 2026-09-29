@@ -2,6 +2,55 @@ import weddingImage from "@/assets/wedding-invitation.jpg";
 import nqueenImage from "@/assets/nqueen-visualizer.jpg";
 import goPassImage from "@/assets/gopass-system.jpg";
 import dastavezImage from "@/assets/dastavez-ai.jpg";
+import mealFinderImage from "@/assets/meal-finder.jpg";
+
+export const contact = {
+  email: "deepsakshi07@gmail.com",
+  resume: "/Sakshi-Deep-Resume.pdf",
+};
+
+export const experiences = [
+  {
+    period: "Jul 2026 — Present",
+    role: "Creative Developer Intern",
+    company: "Utsavy · Jaipur, Rajasthan",
+    description:
+      "Designing and building interactive digital invitation websites for weddings, anniversaries, birthdays and engagements — each one crafted around the family's own story.",
+    points: [
+      "Build bespoke invitation experiences end to end",
+      "Design elegant layouts and typography systems",
+      "Add music, galleries and animated storytelling sections",
+      "Optimise every invite for mobile-first sharing",
+      "Refine visual detail with the creative team",
+    ],
+  },
+  {
+    period: "Jun — Aug 2024",
+    role: "React Developer Intern",
+    company: "OpeBo Industries Ltd",
+    description:
+      "Worked on reusable React interface components and pixel-accurate implementation of design specifications within a collaborative team workflow.",
+    points: [
+      "Built reusable React UI components",
+      "Translated designs into pixel-perfect screens",
+      "Applied clean OOP structure and testing practice",
+      "Collaborated through Git-based workflows",
+    ],
+  },
+];
+
+export const education = [
+  {
+    degree: "Master of Computer Applications",
+    institution: "Amity University, Patna",
+    detail: "2024 — 2026 · 8.5 CGPA",
+  },
+  {
+    degree: "Bachelor of Computer Applications",
+    institution: "M.S. College, Motihari",
+    detail: "80.4%",
+  },
+];
 
 export const skillGroups = [
   { label: "Frontend", items: ["HTML", "CSS", "JavaScript", "React"] },
