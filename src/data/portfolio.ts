@@ -110,6 +110,18 @@ export const projects = [
     imageHeight: 1008,
     alt: "Dastavez AI document workspace interface",
   },
+  {
+    number: "05",
+    title: "Meal Finder",
+    category: "Full-Stack Application",
+    description:
+      "A recipe discovery application where users search meals by name or ingredient, browse curated categories and open full recipe details.",
+    technologies: ["React", "Java", "MySQL", "REST API"],
+    image: mealFinderImage,
+    imageWidth: 1408,
+    imageHeight: 1008,
+    alt: "Meal finder recipe discovery interface",
+  },
 ];
 
 export const processSteps = [
